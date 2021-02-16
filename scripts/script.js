@@ -20,6 +20,9 @@ function calculate(event){
         if(grade == 'A' || grade == 'a'){
             letterGrades[j] = 4;
         }
+        if(grade == 'A-' || grade == 'a-'){
+            letterGrades[j] = 3.7;
+        }
         else if(grade == 'B+' || grade == 'b+'){
             letterGrades[j] = 3.5;
         }
