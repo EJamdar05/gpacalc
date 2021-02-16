@@ -10,15 +10,24 @@
     <body>
         <div id = "wrapper">
             <h1>GPA Calculator</h1>
-            <textarea id = "text-field" rows = "20" cols = "20">
-                THL100 B+ 3
-                PHL107 A 3
-                ENG120 C+ 3
-                MTH245 A 4
-                CSC221 A 3
-            </textarea>
-            <button id = "generate" type = "submit">Submit</button>
-            
+            <div class = "input">
+                <textarea id = "text-field" rows = "20" cols = "20">
+                    THL100 B+ 3
+                    PHL107 A 3
+                    ENG120 C+ 3
+                    MTH245 A 4
+                    CSC221 A 3
+                </textarea>
+                <button id = "generate" type = "submit">Submit</button>
+            </div>
+            <div class = "output">
+                Total GPA Points
+                <input type = text id = "gpa-point" disabled="disabled">
+                Total Credit Hours
+                <input type = text id = "credit-hours" disabled="disabled">
+                Overall GPA
+                <input type = text id = "total-gpa" disabled="disabled">
+            </div> 
         </div>
 
     </body>

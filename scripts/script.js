@@ -48,6 +48,14 @@ function calculate(event){
      for (let i = 0; i < courseHours.length;i++){
         hours+=courseHours[i];
     }
-    
+    console.log(gpa.toFixed(2));
+    console.log(hours);
+    postResults(gpa.toFixed(2),hours);
+}
 
+function postResults(gpa, hours){
+    let overGPA = gpa/hours;
+    document.getElementById("gpa-point").value = gpa; 
+    document.getElementById("credit-hours").value = hours;
+    document.getElementById("total-gpa").value = overGPA;
 }
