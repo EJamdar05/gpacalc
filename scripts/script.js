@@ -6,10 +6,12 @@ function calculate(event){
     let letterGrades = [];
     let courseHours = [];
     for(let i = 0; i < line.length;i++){
-        let splitGrade = line[i].split(' ');
-        letterGrades[i] = splitGrade[1];
-        if(splitGrade[2]!=""){
-            courseHours[i] = parseInt(splitGrade[2]);
+        if(line != '\n'){
+            let splitGrade = line[i].split(' ');
+            letterGrades[i] = splitGrade[1];
+            if(splitGrade[2]!=""){
+                courseHours[i] = parseInt(splitGrade[2]);
+            }
         }
     }
     let grade;
@@ -18,17 +20,14 @@ function calculate(event){
         if(grade == 'A' || grade == 'a'){
             letterGrades[j] = 4;
         }
-        else if(grade == 'A-' || grade == 'a-'){
-            letterGrades[j] = 3.67;
-        }
         else if(grade == 'B+' || grade == 'b+'){
-            letterGrades[j] = 3.33;
+            letterGrades[j] = 3.5;
         }
         else if(grade == 'B' || grade == 'b'){
             letterGrades[j] = 3;
         }
         else if(grade == 'C+' || grade == 'c+'){
-            letterGrades[j] = 2.33;
+            letterGrades[j] = 2.5;
         }
         else if(grade == 'C' || grade == 'c'){
             letterGrades[j] = 2;
@@ -43,14 +42,18 @@ function calculate(event){
      let gpa = 0;
      let hours = 0;
      for (let i = 0; i < letterGrades.length;i++){
-         gpa+=letterGrades[i]*courseHours[i];
-     }
-     for (let i = 0; i < courseHours.length;i++){
+        if(isNaN(courseHours[i])){
+            courseHours[i] = 0;
+        }
         hours+=courseHours[i];
-    }
+        gpa+=letterGrades[i]*courseHours[i];
+     }
+
     console.log(gpa.toFixed(2));
     console.log(hours);
     postResults(gpa.toFixed(2),hours);
+    console.log(courseHours);
+    console.log(letterGrades);
 }
 
 function postResults(gpa, hours){

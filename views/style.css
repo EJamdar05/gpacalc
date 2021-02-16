@@ -37,3 +37,12 @@ body{
 #generate{
     margin: 10px;
 }
+
+.desc{
+    background-color:rgb(229, 252, 207);
+    font-family: 'Trebuchet MS';
+    border: 3px dashed goldenrod;
+    margin: 20px;
+    width: 250px;
+    text-align: center;
+}
