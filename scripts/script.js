@@ -57,5 +57,5 @@ function postResults(gpa, hours){
     let overGPA = gpa/hours;
     document.getElementById("gpa-point").value = gpa; 
     document.getElementById("credit-hours").value = hours;
-    document.getElementById("total-gpa").value = overGPA;
+    document.getElementById("total-gpa").value = overGPA.toFixed(2);
 }

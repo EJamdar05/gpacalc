@@ -1,8 +1,39 @@
-#results{
-    width: 600px;
-    text-align: center;
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    
+}
+textarea{
+    background-color:rgb(229, 252, 207);
+    font-family: 'Trebuchet MS';
+    font-size: 20px;
+    resize: none;
+    border: 5px dashed goldenrod;
+}
+.output{
+    border: 3px dashed green;
+    background-color:rgb(229, 252, 207);
+    width: 200px;
+    font-family: 'Trebuchet MS';
+    
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Trebuchet MS';
 }
 
-#results td, th{
-    border: 1px solid black;
+#title{
+    font-family: 'Trebuchet MS';
+}
+
+body{
+    background-color:khaki;
+}
+
+#generate{
+    margin: 10px;
 }
