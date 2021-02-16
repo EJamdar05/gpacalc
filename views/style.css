@@ -1,0 +1,8 @@
+#results{
+    width: 600px;
+    text-align: center;
+}
+
+#results td, th{
+    border: 1px solid black;
+}
